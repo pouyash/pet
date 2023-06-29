@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Internal Apps
+    'user',
+
+    # External Apps
+
 ]
 
 MIDDLEWARE = [
@@ -51,10 +56,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'pet.urls'
 
+AUTH_USER_MODEL = 'user.User'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
