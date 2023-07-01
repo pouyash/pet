@@ -1,0 +1,19 @@
+{% load static %}
+{% load render_partial %}
+<html lang="en">
+<head>
+    {% include 'utils/head.html' %}
+    <title>{% block title %} PET SHOP {% endblock %}</title>
+</head>
+
+<body>
+
+{% block content %}
+
+{% endblock %}
+
+{% render_partial 'home.views.footer_component' %}
+
+{% include 'utils/footer_script.html' %}
+</body>
+</html>
